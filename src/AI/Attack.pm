@@ -213,7 +213,7 @@ sub dropTargetWhileMoving {
 	my $ID = AI::args->{attackID};
 	message T("Dropping target - you will not kill steal others\n");
 	$char->sendAttackStop;
-	$monsters{$ID}{ignore} = 0;
+	$monsters{$ID}{ignore} = 1;
 
 	# Right now, the queue is either
 	#   move, route, attack
